@@ -1,0 +1,10 @@
+<h2>Productos disponibles</h2>
+<app-producto
+  *ngFor="let p of productos"
+  [producto]="p"
+  (agregar)="agregarAlCarrito($event)">
+</app-producto>
+
+<h3>Total en carrito: ${{ total }}</h3>
+
+<button (click)="vaciarCarrito()">Vaciar carrito</button>
